@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+</head>
+<body>
+<section id="todoapp">
+    <header id="header">
+        <h1>todos</h1>
+        <input id="new-todo" type="text" placeholder="接下来需要完成什么事"/>
+    </header>
+    <section id="main">
+        <input id="toggle-all" type="checkbox"/>
+        <label for="toggle-all">完成</label>
+        <ul id="todo-list"></ul>
+    </section>
+    <footer id="footer"></footer>
+</section>
+<div id="info">
+    <p>双击开始编辑元素</p>
+
+
+</div>
+<script type="text/html" id="item-template">
+
+</script>
+<script type="text/html" id="stats-template">
+
+</script>
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+
+<script src="http://cdn.bootcss.com/lodash.js/3.9.3/lodash.js"></script>
+<script src="http://cdn.bootcss.com/backbone.js/1.2.1/backbone-min.js"></script>
+<script>
+    var b = Backbone.View.extend({
+
+    })
+</script>
+</body>
+</html>
