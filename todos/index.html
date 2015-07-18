@@ -23,10 +23,30 @@
 
 
 </div>
-<script type="text/html" id="item-template">
-
+<script type="text/template" id="item-template">
+    <div class="view">
+        <input class="toggle" type="checkbox" <%= completed?'checked':'' %> />
+        <label><%- title %></label>
+        <button class="destroy"></button>
+    </div>
+    <input class="edit" type="text" value="<%- title %>"/>
 </script>
 <script type="text/html" id="stats-template">
+    <span id="todo-count">
+    <strong><%= remaining %></strong>
+    <%= remaining===1? 'item':'items' %> left
+</span>
+    <ul id="filters">
+        <li>
+            <a class="selected" href="#/">全部</a>
+
+        </li>
+        <li><a href="#/active">未完成</a></li>
+        <li><a href="#/completed">已完成</a></li>
+    </ul>
+    <% if(completed){ %>
+        <botton id="clear-completed">清除所有已完成 (<%= completed %>)</botton>
+    <% } %>
 
 </script>
 <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
