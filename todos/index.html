@@ -35,7 +35,7 @@
     <span id="todo-count">
     <strong><%= remaining %></strong>
     <%= remaining===1? 'item':'items' %> left
-</span>
+    </span>
     <ul id="filters">
         <li>
             <a class="selected" href="#/">全部</a>
@@ -45,18 +45,13 @@
         <li><a href="#/completed">已完成</a></li>
     </ul>
     <% if(completed){ %>
-        <botton id="clear-completed">清除所有已完成 (<%= completed %>)</botton>
+    <botton id="clear-completed">清除所有已完成 (<%= completed %>)</botton>
     <% } %>
 
 </script>
 
 
-<div class="a">
-    <p>todo</p>
-    <ui>
-        <li id="todo1"></li>
-    </ui>
-</div>
+
 <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
 
 <script src="http://cdn.bootcss.com/lodash.js/3.9.3/lodash.js"></script>
@@ -68,6 +63,10 @@
 <script src="js/views/appView.js"></script>
 <script src="js/routers/router.js"></script>
 <script src="js/main.js"></script>
-
+<script>
+    $(function(){
+        new app.AppView();
+    })
+</script>
 </body>
 </html>
