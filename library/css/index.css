@@ -4,8 +4,8 @@ body {
 
 .book-container {
     outline: 1px solid #aaa;
-    width: 350px;
-    height: 130px;
+    width: 380px;
+    height: 150px;
     background-color: #fff;
     float: left;
     margin: 5px;
@@ -13,7 +13,7 @@ body {
 
 .book-container img {
     float: left;
-    mrgin: 10px;
+    margin-right: 10px;
 }
 
 .book-container ul {
