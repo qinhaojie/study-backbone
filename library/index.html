@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div id="books">
+    <form id="add-book" action="#">
+        <div>
+            <label for="cover-image">封面图片</label>
+            <input id="cover-image" type="file"/>
+            <label for="title">标题:</label>
+            <input id="title" type="text"/>
+            <label for="author">作者:</label>
+            <input id="author" type="text"/>
+            <label for="release-date">发布日期</label>
+            <input id="release-date" type="text"/>
+            <label for="keywords">关键词</label>
+            <input id="keywords" type="text"/>
+            <button id="add">添加</button>
+        </div>
+
+    </form>
+
+   <!-- <div class="book-container">
+        <img src="http://www.ituring.com.cn/bookcover/1581.327.jpg"/>
+        <ul>
+            <li><%= title %></li>
+            <li><%= author %></li>
+            <li><%= releaseDate %></li>
+            <li><%= keywords %></li>
+        </ul>
+        <button class="delete">删除</button>
+    </div>-->
+
+</div>
+<script type="text/template" id="book-template">
+    <img src="<%= converImage %>"/>
+    <ul>
+        <li><%= title %></li>
+        <li><%= author %></li>
+        <li><%= releaseDate %></li>
+        <li><%= keywords %></li>
+    </ul>
+    <button class="delete">删除</button>
+</script>
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+
+<script src="http://cdn.bootcss.com/lodash.js/3.9.3/lodash.js"></script>
+<script src="http://cdn.bootcss.com/backbone.js/1.2.1/backbone-min.js"></script>
+<script src="js/models/book.js"></script>
+<script src="js/collections/library.js"></script>
+<script src="js/views/book.js"></script>
+<script src="js/views/library.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
