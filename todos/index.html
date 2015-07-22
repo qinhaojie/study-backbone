@@ -33,7 +33,7 @@
 </script>
 <script type="text/html" id="stats-template">
     <span id="todo-count">
-    <strong><%= remaining %></strong>
+    <strong><%= remaining %></strong> 
     <%= remaining===1? 'item':'items' %> left
     </span>
     <ul id="filters">
@@ -45,7 +45,7 @@
         <li><a href="#/completed">已完成</a></li>
     </ul>
     <% if(completed){ %>
-    <botton id="clear-completed">清除所有已完成 (<%= completed %>)</botton>
+    <button id="clear-completed">清除所有已完成 (<%= completed %>)</button>
     <% } %>
 
 </script>
