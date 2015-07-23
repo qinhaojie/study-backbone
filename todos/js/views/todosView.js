@@ -19,6 +19,14 @@ app.TodoView = Backbone.View.extend({
         this.listenTo(this.model, 'change', this.render);
         this.listenTo(this.model, 'destroy', this.remove);
         this.listenTo(this.model, 'visible', this.toggleVisible);
+        var that =this;
+        this.$el.on('click',function(){
+            app.TodoView.prototype.template = _.template($('#item-template2').html());
+
+        });
+        Object.observe(app.TodoView.prototype, function (c) {
+           that.render();
+        })
     },
 
     render: function () {

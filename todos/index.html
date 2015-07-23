@@ -31,6 +31,14 @@
     </div>
     <input class="edit" type="text" value="<%- title %>"/>
 </script>
+<script type="text/template" id="item-template2">
+    <div class="view">
+        <input class="toggle" type="checkbox" <%= completed?'checked':'' %> />
+        <label style="color:red;"><%- title %></label>
+        <button class="destroy"></button>
+    </div>
+    <input class="edit" type="text" value="<%- title %>"/>
+</script>
 <script type="text/html" id="stats-template">
     <span id="todo-count">
     <strong><%= remaining %></strong> 
